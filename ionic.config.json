@@ -1,0 +1,7 @@
+{
+  "name": "api-bulk",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
