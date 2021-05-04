@@ -33,7 +33,6 @@ export class Prueba1Page implements OnInit {
   async aniadirDatos(){
     await this.db.aniadirDatos();
     console.log("Datos insertados con transacciones");
-    //await this.mostrarDatos();
   }
   
 
@@ -50,7 +49,7 @@ export class Prueba1Page implements OnInit {
 
   async aniadirDatosBatch(){
     let c = 0;
-    for (var cont = 0; cont < 30; cont++){
+    for (var cont = 0; cont < 50; cont++){
       await this.db.aniadirDatosBatch(cont);
       c += this.db.con;
     }
