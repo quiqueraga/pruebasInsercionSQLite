@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Images</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home/']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="mostrarDatabase()" class="ion-text-center">
+    Mostrar Fotos
+  </ion-button>
+  <ion-list *ngFor="let photo of photos">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">{{photo.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img [src]="photo.url"></ion-img>        
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

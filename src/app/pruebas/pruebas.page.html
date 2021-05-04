@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pruebas</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home/']">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="crearDatabase()">
+    Crear Base de Datos
+  </ion-button>
+  <ion-button (click)="probarCon()">
+    Crear Tabla con Autoincremente
+  </ion-button>
+  <ion-button (click)="probarSin()">
+    Crear Tabla sin Autoincremente
+  </ion-button>
+  <ion-button (click)="aniadirDatos()">
+    Añadir datos tx
+  </ion-button>
+  <ion-button (click)="aniadirDatosTransaccionAmpl()">
+    Añadir datos tx 2
+  </ion-button>
+  <ion-button (click)="aniadirDatosBatch()">
+    Añadir datos batch
+  </ion-button>
+  <ion-button (click)="mostrarDatos()">
+    Mostrar prueba
+  </ion-button>
+  <ion-button (click)="borrarTabla()" color="danger">
+    Borrar Tabla Images
+  </ion-button>
+  <ion-list *ngFor="let image of photos">
+    <ion-item>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Imagen {{image.id}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img [src]="image.url"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
